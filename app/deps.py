@@ -19,5 +19,4 @@ def paginacion(page: int = Query(1, ge=1), size: int = Query(10, ge=1)):
     return Page(page=page, size=size)
 
 def sobre(*args, **kwargs):
-    # Función auxiliar para satisfacer la importación de admin_ops
     return True
