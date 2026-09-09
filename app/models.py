@@ -2,7 +2,6 @@ import uuid
 from sqlalchemy import Column, Integer, String, DateTime
 from app.database import Base
 
-# Definimos _uuid para satisfacer la importación que pide models_ops
 _uuid = uuid.uuid4
 
 class User(Base):
@@ -23,3 +22,8 @@ class Plan(Base):
 class Suscripcion(Base):
     __tablename__ = "suscripciones"
     id = Column(Integer, primary_key=True, index=True)
+
+class Actividad(Base):
+    __tablename__ = "actividades"
+    id = Column(Integer, primary_key=True, index=True)
+    nombre = Column(String)
