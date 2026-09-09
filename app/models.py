@@ -1,5 +1,9 @@
+import uuid
 from sqlalchemy import Column, Integer, String, DateTime
 from app.database import Base
+
+# Definimos _uuid para satisfacer la importación que pide models_ops
+_uuid = uuid.uuid4
 
 class User(Base):
     __tablename__ = "users"
